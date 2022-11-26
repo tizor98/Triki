@@ -7,11 +7,16 @@ public class Triki {
     public static void main(String[] args) {
 
         byte cantidadJugadores = iniciarJuego();
-
+        juego
         juegoTriki(cantidadJugadores);
 
     }
 
+    /**
+     * Description: This function executes triki game in the terminal
+     * @param cantJugadores Quantity of players (1 or 2 allowed)
+     * @returns This function does not return any value
+     * */
     public static void juegoTriki(byte cantJugadores) {
         // Se crea el tablero de juego
         byte filas = 3;
@@ -146,7 +151,7 @@ public class Triki {
     }
 
     public static boolean endGame(String[][] tabla, byte player, String mov1, String mov2) {
-        boolean resultado = false;
+        boolean resultado;
         String texto = (player == 1) ? mov1 : mov2;
         String[] tabComparar = new String[]{texto, texto, texto};
         String[] tabDiagonal = new String[]{"","",""};
